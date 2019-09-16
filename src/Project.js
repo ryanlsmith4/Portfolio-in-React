@@ -5,7 +5,7 @@
 import React from 'react';
 import './Project.css';
 
-function Project({ image, title, link, count, gitHubLink, gitlink }) {
+function Project({ image, title, link, count, gitHubPic, gitlink }) {
   return (
     <div className="Project">
       <img className="Project-img" src={image} width="300" height="200" alt="content" />
@@ -13,13 +13,12 @@ function Project({ image, title, link, count, gitHubLink, gitlink }) {
         <h3 className="Child">{title}</h3>
         <h4 className="Child">Likes {count}</h4>
       </div>
-      
       <div className="Project-links">
         <a href={link}>Link to project</a>
         <a href={gitlink}>
-          <img alt="gitlogo" src={gitHubLink} />
+          <img alt="gitlogo" src={gitHubPic} />
         </a>
-      </div>    
+      </div>
     </div>
   );
 }
